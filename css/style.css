@@ -1,0 +1,250 @@
+/* Author    : Wafa Rifqi Anafin
+   Github    : https://github.com/wafarifki
+   Facebook  : https://facebook.com/wafarifkianafin
+   Instagram : https://instagram.com/wafarifki_
+   Website   : https://wafarifki.tk
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body,
+html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  background: linear-gradient(-45deg, #f1ca89, #f29191, #907fa4, #4aa96c);
+  background-size: 400% 400%;
+  animation: animasiBegron 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===================
+   Container Utama
+=================== */
+.kontener {
+  padding: 20px;
+  height: 100%;
+}
+
+.kontener2 {
+  padding: 20px;
+  text-align: center;
+  margin-top: 17%;
+}
+
+.kontener2 h1 {
+  color: #f5f5f5;
+}
+
+/* Tombol */
+.kontener2 .tombol {
+  padding: 10px 30px;
+  background: transparent;
+  color: #bccfd7;
+  outline: none;
+  border: 2px solid #bccfd7;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.kontener2 .tombol:hover {
+  background: #bccfd7;
+  color: #f5f5f5;
+}
+
+/* ===================
+   Isi Kontainer
+=================== */
+.dalemnya_kontener {
+  text-align: center;
+  background: #867ae9;
+  width: 100%;
+  height: 94%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.dalemnya_halaman {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+/* ===================
+   Section / Halaman
+=================== */
+section .gambar {
+  display: block;
+  max-width: 90%;
+  max-height: 400px;
+  margin: 15px auto;
+  object-fit: contain; /* biar gambar utuh, tidak terpotong */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+section .ucapan {
+  font-weight: bold;
+  font-size: 24px;
+  color: #404040;
+}
+
+section .isiucapan {
+  width: 82%;
+  font-weight: 400;
+  font-size: 14px;
+  color: #707070;
+  margin: 0 auto;
+}
+
+/* Halaman 1 */
+section.halaman1 {
+  background: #ff96ad;
+}
+.halaman1 .ucapan1 {
+  text-align: center;
+}
+.halaman1 .isiucapan1 {
+  display: inline-block;
+  width: 80%;
+  color: #f5f5f5;
+}
+
+/* Halaman 2 */
+section.halaman2 {
+  background: #bccfd7;
+}
+.halaman2 .ucapan2 {
+  text-align: center;
+}
+.halaman2 .isiucapan2 {
+  display: inline-block;
+  width: 80%;
+  color: #404040;
+}
+
+/* Halaman 3 */
+section.halaman3 {
+  background: #d3b0ad;
+}
+.halaman3 .ucapan3 {
+  text-align: center;
+}
+.halaman3 .isiucapan3 {
+  display: inline-block;
+  width: 80%;
+  color: #fefefe;
+}
+
+/* Halaman 4 */
+section.halaman4 {
+  background: #f1ca89;
+}
+
+/* Halaman setelah ditutup */
+section.after {
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+}
+
+/* ===================
+   Tombol Menu
+=================== */
+.tombol_menu {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 54px;
+  cursor: pointer;
+  background: url(../gambar/menu.png) no-repeat center;
+  background-size: 44px;
+}
+
+.tombol_menu:active {
+  opacity: 0.2;
+}
+
+/* Judul Halaman */
+.judul_halaman {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  line-height: 70px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ===================
+   Page States
+=================== */
+.page-halaman1 section.halaman1 { transition-delay: 0s; }
+.page-halaman1 section.halaman2 { transition-delay: 0.05s; }
+.page-halaman1 section.halaman3 { transition-delay: 0.1s; }
+.page-halaman1 section.halaman4 { transition-delay: 0.15s; }
+
+.page-halaman2 section.halaman1 { transition-delay: 0s; }
+.page-halaman2 section.halaman2 { transition-delay: 0.05s; }
+.page-halaman2 section.halaman3 { transition-delay: 0.1s; }
+.page-halaman2 section.halaman4 { transition-delay: 0.15s; }
+
+/* ===================
+   Menu Terbuka
+=================== */
+.buka_menu section {
+  cursor: pointer;
+}
+
+.buka_menu section.halaman1 {
+  transform: translateY(70px);
+  transition-delay: 0.15s;
+}
+
+.buka_menu section.halaman2 {
+  transform: translateY(140px);
+  transition-delay: 0.1s;
+}
+
+.buka_menu section.halaman3 {
+  transform: translateY(210px);
+  transition-delay: 0.05s;
+}
+
+.buka_menu section.halaman4 {
+  transform: translateY(280px);
+  transition-delay: 0s;
+}
+
+/* Delay konsisten untuk page states saat buka menu */
+.buka_menu.page-halaman1 section.halaman1 { transition-delay: 0s; }
+.buka_menu.page-halaman1 section.halaman2 { transition-delay: 0.05s; }
+.buka_menu.page-halaman1 section.halaman3 { transition-delay: 0.1s; }
+.buka_menu.page-halaman1 section.halaman4 { transition-delay: 0.15s; }
+
+.buka_menu.page-halaman2 section.halaman1 { transition-delay: 0s; }
+.buka_menu.page-halaman2 section.halaman2 { transition-delay: 0.05s; }
+.buka_menu.page-halaman2 section.halaman3 { transition-delay: 0.1s; }
+.buka_menu.page-halaman2 section.halaman4 { transition-delay: 0.15s; }
+
+/* ===================
+   Animasi Background
+=================== */
+@keyframes animasiBegron {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
